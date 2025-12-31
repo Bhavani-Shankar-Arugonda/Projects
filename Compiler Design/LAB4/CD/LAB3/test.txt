@@ -1,0 +1,5 @@
+S->TA
+A->pTA|e
+T->FB
+B->sFB|e
+F->oSc|i
