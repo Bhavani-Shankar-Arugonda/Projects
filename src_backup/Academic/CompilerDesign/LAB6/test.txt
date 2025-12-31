@@ -1,3 +1,0 @@
-A->AaB|B
-B->BbC|C
-C->cAd|e

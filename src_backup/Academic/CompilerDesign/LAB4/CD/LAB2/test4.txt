@@ -1,6 +1,0 @@
-S->ABCDE
-A->a|e
-B->b|e
-C->c
-D->d|e
-E->f|e

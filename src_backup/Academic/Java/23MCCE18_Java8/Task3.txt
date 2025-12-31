@@ -1,2 +1,0 @@
-Part A List CLass implementation is done.
-find,insert,delete methods are working
