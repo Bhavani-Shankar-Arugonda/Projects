@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ba8bc9;
+}
+
+h1 {
+    color: #343a40;
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+.indiamap{
+    background-color: red;
+    display: inline-block;
+}
+
+img {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    mix-blend-mode: multiply;
+}
+
+.worldmap{
+    font-size: 30px;
+    background-color: rgb(201, 181, 181);
+    img{
+        height: 400px;
+        width:800px;
+        mix-blend-mode: multiply;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="formvalidation.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Registration Form</h1><br><br><br>
+    <form id="registrationForm">
+        <label>Name: <input type="text" id="name" placeholder="Enter Name">  </label><br><br>
+        <label>Email: <input type="text" id="email" placeholder="Enter Email"> <span class="error" id="emailError"></span></label><br><br>
+        <label>Password: <input type="password" id="password" placeholder="Enter password"> <span class="error" id="passwordError"></span></label><br><br>
+        <div class="strength" id="passwordStrength"></div><br>
+        <label>Date of Birth: <input type="text" id="dob" placeholder="mm-dd-yyyy"> <span class="error" id="dobError"></span></label><br><br>
+        <label>Phone: <input type="text" id="phone" placeholder="Enter Mobile Number"> <span class="error" id="phoneError"></span></label><br><br>
+        <button type="submit">Register</button>
+        <button type="reset" id="reset">Reset</button>
+        
+    </form>
+
+    <script src="script.html">
+
+	</script> 
+</body>
+</html>

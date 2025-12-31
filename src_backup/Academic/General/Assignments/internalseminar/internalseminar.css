@@ -1,0 +1,46 @@
+html,body{
+margin: 0px;
+padding:0px;
+background-color: blue;
+}
+
+form{
+    background-color: aqua;
+    margin-right: 300px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+h1{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 30px;
+    height: 30px;
+}
+
+label{
+    padding: 5px;
+    margin: 5px;
+
+}
+
+input,select{
+    margin: 5px;
+    padding: 5px;
+    width: 365px; 
+    height: 40px; 
+    box-sizing: border-box;
+}
+
+textarea{
+    margin: 5px;
+    padding: 5px;
+    width: 365px; 
+    height: 40px; 
+    box-sizing: border-box;
+}

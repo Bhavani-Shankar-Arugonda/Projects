@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            grid-template-columns:20% 40% 40%; 
+            grid-template-rows: 33% 67%;
+           
+          }
+          .col3row1{
+            display: grid;
+            grid-template-rows: 50% 50%;
+          }
+          .col2row2{
+            display: grid;
+            grid-template-rows: 50% 50%;
+            grid-template-columns: 50% 50%;
+          }
+         
+          .frame{
+            border: 1px solid black;
+            overflow: auto;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="col3row1">
+            <div class="frame"></div>
+            <div class="frame"></div>
+        </div>
+        <div class="frame"></div>
+        <div class="col2row2">
+            <div class="frame"></div>
+            <div class="frame"></div>
+            <div class="frame"></div>
+            <div class="frame"></div>
+        </div>
+        
+    </body>
+
+</html>

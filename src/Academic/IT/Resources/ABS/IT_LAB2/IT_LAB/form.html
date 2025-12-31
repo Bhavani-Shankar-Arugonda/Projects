@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="company.css">
+    </head>
+    <body>
+        <marquee behavior="" direction="left"><font size="4">Fill the form.</font></marquee>
+        <h1 style="text-align: center;">GOOGLE</h1>
+        <form action="/submit" method="post" style="font-family: Arial, Helvetica, sans-serif;">
+        Name:
+        <input type="text"  required>
+        <br>
+        Address:
+        <br>
+        <textarea name="Address" placeholder="Address" style="height: 80px; width: 130px; margin-left: 50px;" required></textarea>
+            <br>
+            Gender:
+            <input type="radio" name="Male" value="Male">Male
+            <input type="radio" name="Male" value="female">Female
+            <br>
+            <br>
+            Languages known:
+            <input type="checkbox"  name="Telugu" value="Telugu">Telugu
+            <input type="checkbox" value="English">English
+            <input type="checkbox" value="Hindi">Hindi
+            <input type="checkbox" value="Other">Other
+            <br><br>
+            If other specify: <input type="text">
+            <br>
+            <br>
+            City:
+            <select style="margin-left: 40px;" placeholder="null" required>
+                <option>Hyderabad</option>
+                <option>Ameerpet</option>
+                <option >Chennai</option>
+                <option >Warangal</option>
+                <option>Karimnagar</option>
+                <option >Vizag</option>
+            </select>
+            <br>
+            <br>Phone Number:
+            <input type="number" size="10" width="10"required>
+            <br><br>
+            Email: <input type="email">
+            <br><br>
+            <input class="ab" type="submit" > <input class="abc" type="reset">
+        
+        </form>
+    </body>
+</html>

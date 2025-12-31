@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <h1 style="text-align: center;">GOOGLE</h1>
+        <form action="/submit" method="post" style="font-family: Arial, Helvetica, sans-serif;">
+            <label>Name:</label>
+            <br>
+            <input type="text" style="width: 80%;height: 30px;" name="name" required>  <br>
+            <br>
+            <label>Address:</label>
+            <br>
+            <textarea name="Address" placeholder="Address" style="height: 80px; width: 80%;" required></textarea>  <br><br>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" style="scale: 1.5;"> Male  <input type="radio" name="gender" value="Female" style="scale: 1.5;">Female <br>
+            <br>
+            <label>Languages known:</label>
+            <input type="checkbox"  name="Telugu" value="Telugu" style="scale: 1.5;">Telugu
+            <input type="checkbox"  name="English" value="English" style="scale: 1.5;">English  <input type="checkbox"  name="Hindi" value="Hindi" style="scale: 1.5;">Hindi    <input type="checkbox"  name="Other" value="Other" style="scale: 1.5;">Other    <br><br>
+            <label>If other specify:</label> <br><input type="text" name="otherLanguage" style="height: 40px; width: 80%;">  <br>
+            <br>
+            <label>City:</label><br>
+            <select name="city" style="height: 50px; width: 80%;" placeholder="null" required>  <option value="">---Enter City---</option>  <option value="Hyderabad">Hyderabad</option>
+                <option value="Ameerpet">Ameerpet</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Warangal">Warangal</option>
+                <option value="Karimnagar">Karimnagar</option>
+                <option value="Vizag">Vizag</option>
+            </select>
+            <br>
+            <br><label>Phone Number:</label><br>
+            <input type="number" name="phone" size="10" style="height: 40px; width: 80%;" required>  <br><br>
+            <label>Email: </label><br><input type="email" name="email" style="height: 40px; width: 80%;">  <br><br>
+            <input class="ab" type="submit" style="height: 50px; width: 40%;" > <input class="abc" type="reset" style="height: 50px; width: 40%;">
+        
+        </form>
+    </body>
+</html>

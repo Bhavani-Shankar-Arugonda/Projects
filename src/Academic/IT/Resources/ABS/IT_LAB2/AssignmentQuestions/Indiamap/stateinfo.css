@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f4f4f4;
+}
+
+
+h1 {
+    margin: 20px 0;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+section {
+    min-height: 100vh;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd; 
+    font-size: 30px;
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+     word-wrap: break-word;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#ladakh {
+    background-color: #D1C4E9;
+}
+
+#jammu-kashmir {
+    background-color: #FFEBEE;
+}
+
+#himachal-pradesh {
+    background-color: #FFECB3;
+}
+
+#punjab {
+    background-color: #C8E6C9;
+}
+
+#haryana {
+    background-color: #B2EBF2;
+}
+
+#rajasthan {
+    background-color: #FFE0B2;
+}
+
+#uttar-pradesh {
+    background-color: #FFCCBC;
+}
+
+#bihar {
+    background-color: #F1F8E9;
+}
+
+#west-bengal {
+    background-color: #F3E5F5;
+}
+
+#gujarat {
+    background-color: #FFEB3B;
+}
+
+#maharashtra {
+    background-color: #FFCDD2;
+}
+
+#karnataka {
+    background-color: #C5E1A5;
+}
+
+#tamil-nadu {
+    background-color: #FF9800;
+}
+
+#kerala {
+    background-color: #B2DFDB;
+}
+
+#andhra-pradesh {
+    background-color: #FFEB3B;
+}
+
+#telangana {
+    background-color: #E3F2FD;
+}
+
+#odisha {
+    background-color: #B3E5FC;
+}
+
+#assam {
+    background-color: #C8E6C9;
+}
+
+#meghalaya {
+    background-color: #FFEBEE;
+}
+

@@ -1,0 +1,20 @@
+using linked list
+	Advantages
+		no limitation in size.
+
+		deletion is efficient as only pointer is updated.	
+
+		no overflow issue.
+	Disadvantages
+		uses extra memory for storing next pointer.
+
+using array
+	Advantages
+		can access fast and efficient using array index istead of traversing.
+
+		no extra memory is needed for pointers.
+	Disadvantages
+		fixed size and overflow issues.
+
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Database</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Database</h1>
+
+    <form id="createForm">
+      <h3>Add Student</h3>
+      <input type="text" name="stID" placeholder="Student ID" required>
+      <input type="text" name="name" placeholder="Name" required>
+      <select name="gender" required>
+        <option value="" disabled selected>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="studyProgram" placeholder="Study Program" required>
+      <input type="number" name="yearOfStudy" placeholder="Year of Study" required>
+      <button type="button" id="addStudent">Add Student</button>
+    </form>
+
+    <form id="updateForm">
+      <h3>Update Student</h3>
+      <input type="text" name="stID" placeholder="Student ID (to update)" required>
+      <input type="text" name="name" placeholder="New Name">
+      <select name="gender">
+        <option value="" disabled selected>New Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="email" name="email" placeholder="New Email">
+      <input type="text" name="studyProgram" placeholder="New Study Program">
+      <input type="number" name="yearOfStudy" placeholder="New Year of Study">
+      <button type="button" id="updateStudent">Update Student</button>
+    </form>
+
+    <form id="deleteForm">
+      <h3>Delete Student</h3>
+      <input type="text" name="stID" placeholder="Student ID (to delete)" required>
+      <button type="button" id="deleteStudent">Delete Student</button>
+    </form>
+
+    <h3>Display Students</h3>
+    <button id="fetchStudents">Show All Students</button>
+    <div id="studentList"></div>
+  </div>
+
+  <script>
+    const addStudent = document.getElementById('addStudent');
+    const updateStudent = document.getElementById('updateStudent');
+    const deleteStudent = document.getElementById('deleteStudent');
+    const fetchStudents = document.getElementById('fetchStudents');
+    const studentList = document.getElementById('studentList');
+
+    addStudent.addEventListener('click', async () => {
+      const formData = new FormData(document.getElementById('createForm'));
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('http://localhost:3000/students', {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        if (!response.ok) {
+          throw new Error(`Failed to add student. Status: ${response.status}`);
+        }
+
+        alert('Student added successfully!');
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to add student.');
+      }
+    });
+
+    updateStudent.addEventListener('click', async () => {
+      const formData = new FormData(document.getElementById('updateForm'));
+      const stID = formData.get('stID');
+      formData.delete('stID');
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch(`http://localhost:3000/students/${stID}`, {
+          method: 'PUT',
+          body: JSON.stringify(data),
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to update student.');
+        }
+
+        alert('Student updated successfully!');
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to update student.');
+      }
+    });
+
+    deleteStudent.addEventListener('click', async () => {
+      const stID = new FormData(document.getElementById('deleteForm')).get('stID');
+
+      try {
+        const response = await fetch(`http://localhost:3000/students/${stID}`, { method: 'DELETE' });
+
+        if (!response.ok) {
+          throw new Error('Failed to delete student.');
+        }
+
+        alert('Student deleted successfully!');
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to delete student.');
+      }
+    });
+
+    fetchStudents.addEventListener('click', async () => {
+      const response = await fetch('http://localhost:3000/students');
+      const students = await response.json();
+      studentList.innerHTML = '';
+
+      if (students.length === 0) {
+        studentList.innerHTML = '<p>No students found</p>';
+      } else {
+        students.forEach(student => {
+          const div = document.createElement('div');
+          div.innerHTML = `
+            <p><strong>ID:</strong> ${student.stID}</p>
+            <p><strong>Name:</strong> ${student.name}</p>
+            <p><strong>Gender:</strong> ${student.gender}</p>
+            <p><strong>Email:</strong> ${student.email}</p>
+            <p><strong>Study Program:</strong> ${student.studyProgram}</p>
+            <p><strong>Year of Study:</strong> ${student.yearOfStudy}</p>
+            <hr>
+          `;
+          studentList.appendChild(div);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
