@@ -1,3 +1,0 @@
-S->iCtSA|a
-A->dS|e
-C->b

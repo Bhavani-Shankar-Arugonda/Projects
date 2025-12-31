@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=SLL
-comment1.params=data\ pos
-comment1.target=void\ insertAt(java.lang.Object,\ int)
-comment2.params=data
-comment2.target=void\ delete(java.lang.Object)
-comment3.params=
-comment3.target=void\ display()
-numComments=4
